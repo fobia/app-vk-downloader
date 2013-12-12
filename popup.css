@@ -1,0 +1,42 @@
+.downloader-popup .center-block {
+  font-size: 14px;
+  font-family: Tahoma;
+  padding: 15px;
+  overflow: hidden;
+  /*height:500px;*/
+  margin: auto;
+  
+}
+.downloader-popup .center-block ul li {
+  margin: 0;
+  padding: 0;
+  
+}
+html.downloader-popup {
+	height: 400px;
+}
+
+.downloader-popup body {
+	overflow-x: hidden;
+	margin: 0;
+	width: 340px;
+	height: 400px;
+}
+
+/*.downloader-popup li {
+	list-style: none;
+}*/
+.downloader-popup a {
+	color: #33BFF3;
+}
+
+.downloader-popup a.sprintweb {
+	background: url('sprintweb-logo.png') center center no-repeat;
+	width: 155px;
+	height: 50px;
+	display: block;
+	margin: 10px auto;
+}
+.downloader-popup div {
+	margin-bottom: 5px;
+}

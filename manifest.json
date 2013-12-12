@@ -1,0 +1,23 @@
+{
+   "browser_action": {
+      "default_icon": "download32x32.png",
+      "default_popup": "popup.html",
+      "default_title": "Vk Downloader Lite! No Ads"
+   },
+   "content_scripts": [ {
+      "css": [ "downloader.css", "popup.css" ],
+      "js": [ "jquery-2.0.3.min.js", "background.js" ],
+      "matches": [ "*://vk.com/*" ]
+   } ],
+   "description": "Простое расширение Chrome, позволяющее скачивать музыку ВКонтакте.",
+   "icons": {
+      "16": "download16x16.png",
+      "32": "download32x32.png",
+      "48": "download48x48.png"
+   },
+   "manifest_version": 2,
+   "name": "Vk Music Downloader Lite",
+   "permissions": [ "tabs" ],
+   "version": "1.1.6",
+   "web_accessible_resources": [ "download.png", "download16x16.png", "sprintweb-logo.png" ]
+}

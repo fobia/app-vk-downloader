@@ -1,0 +1,46 @@
+.download_wrapper {
+  height: 28px;
+}
+
+#audios_list .download_wrapper {
+	/*position: absolute;*/
+	color: #fff;
+  height: 34px;
+	/*top: 0px;*/
+	/*right: 66px;*/
+	float: right;	
+	background: #fff;
+  margin: 0 6px 0 0;
+}
+
+.download_link {
+  height: 28px;
+	width: 28px !important;
+	color: #fff;
+	text-align: center;
+	display: block;
+	-webkit-transition: background 0.2s ease;
+  padding: 0px !important;
+}
+
+#audios_list .download_link {
+	border: 1px solid #ccc;
+  height: 32px;
+	width: 32px !important;
+}
+.download_link:hover {
+	border-color: #E0E0E0;
+	background-color: #E0E0E0 !important;
+}
+
+#left_ads {
+	display: none;
+}
+
+#audio.new .audio .title_wrap {
+  width: 300px !important;
+}
+
+.audio:hover .duration {
+  display: none;
+}
